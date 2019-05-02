@@ -1,0 +1,51 @@
+# Default values for myhelmchartplanet.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# Namespace
+nameSpace: hcl-app
+
+# Docker image pull secret
+dockerImagePullSecretName: hcl-app-pull-secret
+dockerImagePullSecretValue: eyJhdXRocyI6eyJteWNsdXN0ZXJoY2wzLmljcDo4NTAwIjp7InVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6ImFkbWludGgiLCJlbWFpbCI6Im51bGwiLCJhdXRoIjoiWVdSdGFXNDZZV1J0YVc1MGFBPT0ifX19
+
+# API service URL for interest rate
+jkeApiServiceUrlAll: https://api-apic.in.ibm.com/hcl-demo-org/dev/interest-rates
+jkeApiServiceUrlFd: https://api-apic.in.ibm.com/hcl-demo-org/dev/interest-rates-by-category?categoryName=FD
+jkeApiServiceUrlRd: https://api-apic.in.ibm.com/hcl-demo-org/dev/interest-rates-by-category?categoryName=RD
+  
+# Springboot default port
+serverPortWeb: 8045
+serverPortMQ: 8046
+serverPortAPI: 8047
+serverPortBankStreet: 8048
+
+# DB Properties
+dbType: db2
+dbPotocol: jdbc:db2
+dbHostName: 9.184.115.97
+dbPort: 60000
+dbName: gisdb
+dbUsername: db2inst1
+dbPassword: root123
+
+# MQ Properties
+mqQueueManager: QM1
+mqChannel: DEV.APP.SVRCONN
+mqHostName: 9.121.242.180
+mqPort: 31132
+mqUser: admin
+mqPassword: passw0rd
+
+# MQ Properties
+mqQueueNameReq: JKE.ACCT.REQ
+mqQueueNameInt: JKE.ACCT.INT
+mqQueueNameRes: JKE.ACCT.RES
+mqDeadQueueName: DEV.DEAD.LETTER.QUEUE
+mqExchange: jke-exchange
+jkeMqUseRes: true
+
+# JKE Notifications
+jkeNotificationEnabled: true
+jkeNotificationFrom: admjke@gmail.com
+jkeNotificationSendgridKey: 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
